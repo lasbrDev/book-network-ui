@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationRequest } from '../../services/models';
 import { AuthenticationService } from '../../services/services';
+import { TokenService } from '../../services/token/token.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private authService: AuthenticationService,
-    //private tokenService: TokenService
+    private tokenService: TokenService
   ) { }
 
   register() {
